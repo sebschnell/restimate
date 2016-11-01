@@ -1,0 +1,18 @@
+Package: restimate
+Type: Package
+Title: Collection of survey sampling estimators
+Version: 0.1.0
+Author: Sebastian Schnell
+Maintainer: Sebastian Schnell <Sebastian.Schnell@outlook.de>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+LazyData: TRUE
+Imports:
+    Rcpp (>= 0.12.1),
+	RcppArmadillo,
+    data.table
+LinkingTo: 
+	Rcpp, 
+	RcppArmadillo
+RoxygenNote: 5.0.1
+Encoding: UTF-8

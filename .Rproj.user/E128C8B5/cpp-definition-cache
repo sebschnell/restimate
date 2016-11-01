@@ -1,0 +1,35 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "C:/Users/Sebastian Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 17,
+                "name" : "est_var_mb(const Eigen::MatrixXd &, const Eigen::MatrixXd &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_var_mb#&1$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#S0_#"
+            },
+            {
+                "column" : 17,
+                "file" : "C:/Users/Sebastian Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 37,
+                "name" : "est_res_hc(const Eigen::VectorXd &, const Eigen::VectorXd &, const Eigen::MatrixXd &, const Eigen::MatrixXd &, const Eigen::MatrixXd &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_res_hc#&1$@N@Eigen@C@Matrix>#d#VI-1#VI1#VI0#VI-1#VI1#S0_#&1$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#S2_#S2_#"
+            },
+            {
+                "column" : 17,
+                "file" : "C:/Users/Sebastian Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 67,
+                "name" : "est_vcov_hc(const Eigen::VectorXd &, const Eigen::MatrixXd &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_vcov_hc#&1$@N@Eigen@C@Matrix>#d#VI-1#VI1#VI0#VI-1#VI1#&1$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#"
+            }
+        ],
+        "file" : "C:/Users/Sebastian Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+        "file_last_write" : 1474871897
+    }
+]

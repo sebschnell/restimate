@@ -1,0 +1,35 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 17,
+                "name" : "est_var_mb(const int &, const int &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_var_mb#&1I#S0_#"
+            },
+            {
+                "column" : 17,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 37,
+                "name" : "est_res_hc(const int &, const int &, const int &, const int &, const int &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_res_hc#&1I#S0_#S0_#S0_#S0_#"
+            },
+            {
+                "column" : 17,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+                "kind" : 6,
+                "line" : 66,
+                "name" : "est_vcov_hc(const int &, const int &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_vcov_hc#&1I#S0_#"
+            }
+        ],
+        "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utils.cpp",
+        "file_last_write" : 1475678488
+    }
+]

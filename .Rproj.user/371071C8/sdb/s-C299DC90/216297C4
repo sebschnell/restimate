@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#include <RcppArmadillo.h>\n\n// [[Rcpp::plugins(cpp11)]]\n// [[Rcpp::depends(RcppArmadillo)]]\n\n//' Model-based variance estimator for an estimated population total\n//'\n//' @param cov Model parameter covariance matrix\n//' @param X Design matrix\n//' @return The variance estimate\n//'\n//' @export\n// [[Rcpp::export]]\ndouble est_var_mb(const arma::mat &cov, const arma::mat &X) {\n  arma::mat one_vec(X.n_rows, 1);\n  one_vec.ones();\n  arma::mat r = one_vec.t()*X*cov*X.t()*one_vec;\n  return r(0, 0);\n}\n\n//' Return the sum of squared estimated residuals when two OLS models are\n//' applied in model-based inference\n//'\n//' @param X Design matrix of the first model for the first-phase sample\n//' @param Z Design matrix of the second model for the first-phase sample\n//' @param beta Parameter estimates of the first model (column vector)\n//' @param alpha Parameter estimates of the second model (column vector)\n//' @param vcov_beta Variance/co-variance matrix of first-model parameters\n//'   estimates\n//' @return The residual sum of squares\n//'\n//' @export\n// [[Rcpp::export]]\ndouble res_ss_tm(const arma::mat &X,\n                 const arma::mat &Z,\n                 const arma::colvec beta,\n                 const arma::colvec alpha,\n                 const arma::mat vcov_beta) {\n  arma::mat res = Z*alpha - X*beta;\n  arma::mat r = res.t()*res + est_var_mb(vcov_beta, X);\n  return r(0, 0);\n}\n\n//' Estimated model parameter covariance matrix for the top-level model in\n//' hierarchical model-based inference setting when two models are applied\n//'\n//' @param Z Design matrix of the second model for the first-phase sample\n//' @param res Sum of squared residuals for the top-level model\n//' @return Estimated covariance matrix for model parameter estimates\n//'\n//' @export\n// [[Rcpp::export]]\narma::mat vcov_tm(const arma::mat &Z,\n               const double ss_res) {\n  double mss = ss_res/(Z.n_rows - Z.n_cols - 1);\n  return mss*(Z.t()*Z).i();\n}\n\n//' Return the squared estimated residuals when two OLS models are\n//' applied in model-based inference and heteroscedasticity is present\n//'\n//' @param X Design matrix of the first model for the first-phase sample\n//' @param Z Design matrix of the second model for the first-phase sample\n//' @param beta Parameter estimates of the first model (column vector)\n//' @param alpha Parameter estimates of the second model (column vector)\n//' @param vcov_beta_hc Variance/co-variance matrix of first-model parameters\n//'   estimates\n//' @return The residual sum of squares\n//'\n//' @export\n// [[Rcpp::export]]\narma::mat res_ss_hc_tm(const arma::mat &X,\n                       const arma::mat &Z,\n                       const arma::colvec beta,\n                       const arma::colvec alpha,\n                       const arma::mat vcov_beta_hc) {\n  arma::colvec one_vec(X.n_rows, arma::fill::ones);\n  arma::mat res = Z*alpha - X*beta;\n  arma::mat r = square(res) + X*vcov_beta_hc*X.t()*one_vec;\n  return r;\n}\n\n//' Estimated model parameter covariance matrix for the top-level model in\n//' hierarchical model-based inference setting when two models are applied\n//'\n//' @param Z Design matrix of the second model for the first-phase sample\n//' @param res Sum of squared residuals for the top-level model\n//'\n//' @details The heteroskedasticity-consistent version\n//'\n//' @return Estimated covariance matrix for model parameter estimates\n//'\n//' @export\n// [[Rcpp::export]]\narma::mat vcov_tm_hc(const arma::mat &res_sq,\n                     const arma::mat &X) {\n  const arma::mat cross_inv = (X.t()*X).i();\n  arma::mat sum(X.n_cols, X.n_cols, arma::fill::zeros);\n  for (unsigned i = 0; i < X.n_rows; ++i) {\n    sum += res_sq(i)*X.row(i).t()*X.row(i);\n  }\n  return cross_inv*sum*cross_inv;\n}\n",
+    "created" : 1477395649372.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3010739684",
+    "id" : "216297C4",
+    "lastKnownWriteTime" : 1477501960,
+    "last_content_update" : 1477501960534,
+    "path" : "~/LiDAR_Satellite/R/restimate1/src/test.cpp",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

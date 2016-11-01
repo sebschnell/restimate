@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' White's heteroskedasticity consistent covariance matrix estimator\n#'\n#' @param X Design matrix\n#' @param res Model residuals\n#'\n#' @return Estimated parameter variance-co-variance matrix\n#'\n#' @references White, H. (1980). \"A Heteroskedasticity-Consistent Covariance\n#'   Matrix Estimator and a Direct Test for Heteroskedasticity.\" Econometrica\n#'   48(4): 817-838.\n#' @export\nvcov_white <- function(X, res) {\n  n = nrow(X);\n  df = n - ncol(X);\n\n  V_n = matrix(0, ncol(X), ncol(X));\n  for (i in seq.int(nrow(X))) {\n    V_n = V_n + n*res[i]^2/df*X[i,]%*%t(X[i,]);\n  }\n\n  return(solve(t(X)%*%X)%*%V_n%*%solve(t(X)%*%X));\n}\n",
+    "created" : 1477502336665.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1416817401",
+    "id" : "5044DE7",
+    "lastKnownWriteTime" : 1477389362,
+    "last_content_update" : 1477389362,
+    "path" : "~/LiDAR_Satellite/R/restimate/R/model_based_utils.R",
+    "project_path" : "R/model_based_utils.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

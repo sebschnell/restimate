@@ -1,0 +1,53 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+                "kind" : 6,
+                "line" : 14,
+                "name" : "est_var_mb(const arma::mat &, const arma::mat &)",
+                "parent_name" : "",
+                "usr" : "c:@F@est_var_mb#&1$@N@arma@C@Mat>#d#S0_#"
+            },
+            {
+                "column" : 8,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+                "kind" : 6,
+                "line" : 34,
+                "name" : "res_ss_tm(const arma::mat &, const arma::mat &, const arma::colvec, const arma::colvec, const arma::mat)",
+                "parent_name" : "",
+                "usr" : "c:@F@res_ss_tm#&1$@N@arma@C@Mat>#d#S0_#1$@N@arma@C@Col>#d#1S2_#1S1_#"
+            },
+            {
+                "column" : 11,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+                "kind" : 6,
+                "line" : 53,
+                "name" : "vcov_tm(const arma::mat &, const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@vcov_tm#&1$@N@arma@C@Mat>#d#1d#"
+            },
+            {
+                "column" : 11,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+                "kind" : 6,
+                "line" : 72,
+                "name" : "res_ss_hc_tm(const arma::mat &, const arma::mat &, const arma::colvec, const arma::colvec, const arma::mat)",
+                "parent_name" : "",
+                "usr" : "c:@F@res_ss_hc_tm#&1$@N@arma@C@Mat>#d#S0_#1$@N@arma@C@Col>#d#1S2_#1S1_#"
+            },
+            {
+                "column" : 11,
+                "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+                "kind" : 6,
+                "line" : 95,
+                "name" : "vcov_tm_hc(const arma::mat &, const arma::mat &)",
+                "parent_name" : "",
+                "usr" : "c:@F@vcov_tm_hc#&1$@N@arma@C@Mat>#d#S0_#"
+            }
+        ],
+        "file" : "C:/Users/Schnell/Documents/LiDAR_Satellite/R/restimate/src/model_based_utilities.cpp",
+        "file_last_write" : 1477501960
+    }
+]
